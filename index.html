@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Creative Developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="smooth-content">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <span class="bracket">&lt;</span>
+            <span class="brand">Ryan Sun</span>
+            <span class="bracket">/&gt;</span>
+            <span class="dev-badge">dev</span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">home</a></li>
+            <li><a href="#about" class="nav-link">about</a></li>
+            <li><a href="#skills" class="nav-link">skills</a></li>
+            <li><a href="#experience" class="nav-link">experience</a></li>
+            <li><a href="#projects" class="nav-link">projects</a></li>
+            <li><a href="#contact" class="nav-link">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="hero-center">
+            <h1 class="hero-name">Ryan Sun</h1>
+            <p class="hero-role">
+              <span
+                class="typing"
+                data-text="Software · Embedded · Hardware · Robotics"
+                >Software · Embedded · Hardware · Robotics</span
+              ><span class="cursor">▌</span>
+            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">See Work</a>
+            </div>
+          </div>
+        </div>
+        <!-- move visual elements outside hero-content so svg can cover full hero -->
+        <div class="hero-visual robotics-scene">
+          <!-- Full-cover PCB / circuit animation SVG -->
+          <svg
+            viewBox="0 0 1200 700"
+            preserveAspectRatio="xMidYMid slice"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Traces (animated) - expanded to cover more of the hero -->
+            <g
+              class="traces"
+              stroke="var(--accent-alt)"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            >
+              <path
+                class="trace"
+                d="M40 620 L220 620 L360 480 L520 480 L700 620 L1080 620"
+              />
+              <path
+                class="trace"
+                d="M60 120 L200 120 L340 260 L520 260 L760 120 L1100 120"
+              />
+              <path
+                class="trace"
+                d="M120 420 L260 420 L420 300 L600 300 L780 420 L980 420"
+              />
+              <path
+                class="trace"
+                d="M40 320 L160 320 L300 440 L480 440 L640 320 L900 320"
+              />
+              <path
+                class="trace"
+                d="M1000 520 L880 380 L720 380 L620 520 L520 380"
+              />
+            </g>
+
+            <!-- Pads / LEDs -->
+            <g class="pads" fill="var(--accent)">
+              <circle class="led" cx="40" cy="620" r="5" />
+              <circle class="led" cx="220" cy="620" r="5" />
+              <circle class="led" cx="360" cy="480" r="5" />
+              <circle class="led" cx="520" cy="480" r="5" />
+              <circle class="led" cx="700" cy="620" r="5" />
+              <circle class="led" cx="1080" cy="620" r="5" />
+
+              <circle class="led" cx="60" cy="120" r="5" />
+              <circle class="led" cx="200" cy="120" r="5" />
+              <circle class="led" cx="340" cy="260" r="5" />
+              <circle class="led" cx="520" cy="260" r="5" />
+              <circle class="led" cx="760" cy="120" r="5" />
+              <circle class="led" cx="1100" cy="120" r="5" />
+
+              <circle class="led" cx="1000" cy="520" r="5" />
+              <circle class="led" cx="880" cy="380" r="5" />
+              <circle class="led" cx="720" cy="380" r="5" />
+            </g>
+
+            <!-- Components: connectors, headers, caps - add hardware feel -->
+            <g class="components" fill="none" stroke="rgba(255,255,255,0.06)">
+              <rect
+                x="240"
+                y="560"
+                width="80"
+                height="16"
+                rx="2"
+                fill="rgba(0,0,0,0.12)"
+                stroke="rgba(255,255,255,0.06)"
+              />
+              <rect
+                x="840"
+                y="100"
+                width="120"
+                height="22"
+                rx="3"
+                fill="rgba(0,0,0,0.12)"
+                stroke="rgba(255,255,255,0.06)"
+              />
+              <rect
+                x="640"
+                y="340"
+                width="56"
+                height="36"
+                rx="4"
+                fill="rgba(255,255,255,0.02)"
+                stroke="rgba(255,255,255,0.06)"
+              />
+              <!-- small capacitor stubs -->
+              <rect
+                x="420"
+                y="280"
+                width="6"
+                height="18"
+                fill="var(--accent-alt)"
+              />
+              <rect
+                x="600"
+                y="280"
+                width="6"
+                height="18"
+                fill="var(--accent-alt)"
+              />
+            </g>
+
+            <!-- Stylized MCU block -->
+            <g class="cpu" transform="translate(520,120)">
+              <rect
+                x="-80"
+                y="-40"
+                width="160"
+                height="80"
+                rx="8"
+                fill="rgba(255,255,255,0.02)"
+                stroke="var(--text-light)"
+                stroke-width="1"
+              />
+              <text
+                x="0"
+                y="8"
+                fill="var(--text-light)"
+                font-size="18"
+                font-family="monospace"
+                text-anchor="middle"
+              >
+                MCU
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="hero-bg">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+        </div>
+        <div class="scroll-indicator subtle">
+          <span>scroll</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>About Me</h2>
+            <div class="line"></div>
+          </div>
+          <div class="about-content">
+            <div class="about-left">
+              <img src="avatar.jpg" alt="Ryan Sun" class="avatar" />
+            </div>
+            <div class="about-right">
+              <div class="about-text">
+                <p>
+                  Hey I'm <strong>Ryan Sun</strong> and I'm a first year
+                  computer engineering student at the
+                  <strong>University of Toronto</strong>, graduating in 2030.
+                  I'm interested in
+                  <strong>firmware development and PCB design</strong>.
+                </p>
+                <p>
+                  In my free time, I enjoy playing <strong>mahjong</strong> with
+                  my friends and going <strong>fishing</strong>. I also enjoy
+                  playing <strong>volleyball</strong> and going on
+                  <strong>hikes</strong>.
+                </p>
+                <p>
+                  Feel free to take a look at my projects and portfolio. Thanks.
+                  :)
+                </p>
+              </div>
+              <div class="socials">
+                <a
+                  href="https://github.com/RyanSun1112"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 .5C5.7.5.7 5.5.7 11.8c0 5 3.3 9.3 7.9 10.8.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6.7 2 1.1.1-.8.4-1.4.7-1.8-2.5-.3-5.1-1.3-5.1-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.4 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.2-1.6 3.2-1.2 3.2-1.2.6 1.8.2 3.1.1 3.4.8.9 1.2 2 1.2 3.3 0 4.5-2.6 5.5-5.1 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.8C23.3 5.5 18.3.5 12 .5z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/ryansun123sun"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8.9h4.56V24H.2V8.9zM8.9 8.9h4.38v2.04h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.46 3.04 5.46 6.99V24H18.5v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.76 1.87-2.76 3.8V24H8.9V8.9z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://twitter.com/RyanSun1112"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 4.6c-.9.4-1.8.6-2.8.8 1-.6 1.8-1.6 2.2-2.8-.9.6-2 .9-3.1 1.2C19.6 2.6 18 2 16.4 2c-2.7 0-4.9 2.2-4.9 4.9 0 .4 0 .8.1 1.1-4.1-.2-7.7-2.2-10.1-5.3-.4.6-.6 1.2-.6 1.9 0 1.6.8 3 2 3.8-.7 0-1.4-.2-2-.6v.1c0 2.3 1.6 4.2 3.8 4.6-.4.1-.7.1-1.1.1-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.5 3.3-1.6 1.2-3.6 1.9-5.7 1.9-.4 0-.7 0-1.1-.1 2 1.2 4.4 1.9 6.9 1.9 8.3 0 12.9-6.9 12.9-12.9v-.6c.9-.7 1.6-1.6 2.2-2.6-.8.4-1.7.6-2.6.7z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>Skills</h2>
+            <div class="line"></div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Languages & Frameworks</h3>
+              <div class="skill-list">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Google AI API</span>
+                <span class="skill-tag">OSMnx</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Tools & Platforms</h3>
+              <div class="skill-list">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Arduino IDE</span>
+                <span class="skill-tag">Altium</span>
+                <span class="skill-tag">Excel</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Soft Skills</h3>
+              <div class="skill-list">
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Attention to Detail</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Creative</span>
+                <span class="skill-tag">Time Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-number">03</span>
+            <h2>Experience</h2>
+            <div class="line"></div>
+          </div>
+            <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <img src="download (4).jpg" alt="Human Powered Vehicle Design Team" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" />
+                <div>
+                <div class="timeline-header">
+                  <h3>Watercraft Electronics Subteam</h3>
+                  <span class="timeline-date">October 2025 — Present</span>
+                </div>
+                <p class="timeline-company">
+                  Ottawa Powerboat Vehicle Design Team
+                </p>
+                <p>
+                  Developing the electric propulsion control circuit for a
+                  hovercraft with actuators and ultrasonic sensors. Managing
+                  project budget and ensuring all decisions are properly
+                  documented and executed.
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <img src="download (5).jpg" alt="IEEE University of Toronto" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" />
+                <div>
+                <div class="timeline-header">
+                  <h3>IEEE University of Toronto Chapter</h3>
+                  <span class="timeline-date">September 2023 — Present</span>
+                </div>
+                <p class="timeline-company">
+                  Hackathon Organizer & Contributor
+                </p>
+                <p>
+                  Planned and executed NewHacks hackathon for 300+ participants.
+                  Assessed 60+ applications, coordinated with speaker/team
+                  communications, and managed all logistics for the event.
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <img src="download (6).jpg" alt="Coding Club" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" />
+                <div>
+                <div class="timeline-header">
+                  <h3>Coding Club Leader</h3>
+                  <span class="timeline-date">September 2014 — June 2025</span>
+                </div>
+                <p class="timeline-company">
+                  Longfields Davidson Heights Secondary School
+                </p>
+                <p>
+                  Mentored 20-30 students in Python fundamentals, data
+                  structures, and object-oriented programming. Designed and
+                  maintained online coding modules and competitions for club
+                  participants.
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <img src="images.png" alt="SharkByte" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" />
+                <div>
+                <div class="timeline-header">
+                  <h3>SharkByte</h3>
+                  <span class="timeline-date">July 2024 — August 2024</span>
+                </div>
+                <p class="timeline-company">SharkByte</p>
+                <p>
+                  Developed full-stack web application using PHP and Laravel for
+                  vacation planning. Collaborated with product manager and
+                  implemented key features for improved user experience.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-number">04</span>
+            <h2>Featured Projects</h2>
+            <div class="line"></div>
+          </div>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image project-image-1"></div>
+              <div class="project-info">
+                <h3>Navion | UTEK</h3>
+                <p>
+                  Route optimization app designed for first-responders to find
+                  the shortest path between locations. Implemented A* algorithm
+                  with map data from 25,000+ nodes.
+                </p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>A* Algorithm</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="#" class="project-link">view project →</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image project-image-2"></div>
+              <div class="project-info">
+                <h3>ReeScout | NewHacks</h3>
+                <p>
+                  Location and analysis app to educate viewers on tourism and
+                  reef ecosystems. Uses Google AI API to analyze reef data with
+                  a minimalist React interface.
+                </p>
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>Google AI API</span>
+                  <span>October 2025</span>
+                </div>
+                <a href="#" class="project-link">view project →</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image project-image-3"></div>
+              <div class="project-info">
+                <h3>Biology and Chemistry App</h3>
+                <p>
+                  Educational learning platform teaching human biology,
+                  chemistry, and diseases using Python Tkinter and Java Swing.
+                  Verified by teachers for Grade 11+ curriculum.
+                </p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Java</span>
+                  <span>Education</span>
+                </div>
+                <a href="#" class="project-link">view project →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-number">05</span>
+            <h2>Let's Connect</h2>
+            <div class="line"></div>
+          </div>
+          <div class="contact-content">
+            <div class="contact-text">
+              <p>
+                I'm always interested in hearing about new projects and
+                opportunities. Whether you have a question or just want to say
+                hi, feel free to get in touch!
+              </p>
+            </div>
+            <div class="contact-methods">
+              <a href="mailto:ryanuz@umail.utoronto.ca" class="contact-item">
+                <span class="contact-icon">@</span>
+                <span>ryanuz@umail.utoronto.ca</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/ryansun123sun"
+                target="_blank"
+                class="contact-item"
+              >
+                <span class="contact-icon">in</span>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/RyanSun1112"
+                target="_blank"
+                class="contact-item"
+              >
+                <span class="contact-icon">&lt;&gt;</span>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://twitter.com/RyanSun1112"
+                target="_blank"
+                class="contact-item"
+              >
+                <span class="contact-icon">𝕏</span>
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>
+            &copy; 2026 Ryan Sun. Crafted with <span class="heart">♡</span> and
+            code.
+          </p>
+          <div class="footer-links">
+            <a href="https://github.com/RyanSun1112" target="_blank">github</a>
+            <a href="https://linkedin.com/in/ryansun123sun" target="_blank"
+              >linkedin</a
+            >
+            <a href="https://twitter.com/RyanSun1112" target="_blank"
+              >twitter</a
+            >
+          </div>
+          <div class="dev-footer">
+            Built with love, Coffee, and TypeScript ✦
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
