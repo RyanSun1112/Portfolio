@@ -2,12 +2,11 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const targetEl = document.querySelector(this.getAttribute('href'));
+        if (targetEl) {
+            // Update custom scroll target and scroll
+            target = targetEl.offsetTop;
+            window.scrollTo({ top: target, behavior: 'smooth' });
         }
     });
 });
@@ -87,7 +86,7 @@ function typeText(el, text, speed = 60) {
     if (!smoothEl) return;
 
     // Disable native CSS smooth for programmatic control
-    try { document.documentElement.style.scrollBehavior = 'auto'; } catch(e) {}
+    // try { document.documentElement.style.scrollBehavior = 'auto'; } catch(e) {}
 
     let bodyHeightSet = false;
     function setBodyHeight() {

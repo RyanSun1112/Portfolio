@@ -37,7 +37,7 @@ html {
 }
 
 body {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-family: 'Open Sans', sans-serif;
     background: linear-gradient(135deg, #0f172a 0%, #1a1f2e 100%);
     color: var(--text);
     line-height: 1.6;
@@ -276,6 +276,7 @@ a:hover {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -385,7 +386,7 @@ a:hover {
     border: 1px solid rgba(255,255,255,0.04);
     border-radius: 8px;
     padding: 0;
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.85rem;
     overflow: hidden;
 }
@@ -415,7 +416,7 @@ a:hover {
     color: var(--text-light);
     padding: 1rem;
     border-radius: 6px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
 }
 
